@@ -33,12 +33,26 @@
 
 .gallery img {
   max-width: 100%;
-  
+  -webkit-user-drag: element;
+  /* user-drag: element; */
+  user-select: none;
   cursor: pointer;
 }
+
+.grabbing {
+  cursor: grabbing;
+}
+
 .selected {
   filter: blur(4px);
   -webkit-filter: blur(4px);
+}
+
+.transition {
+  transform: scale(1.03);
+  transition: transform 0.7;
+  cursor: move
+
 }
 
 @media screen and (min-width: 1025px) {
